@@ -22,7 +22,7 @@ public class ClickMe extends Application {
 		BorderPane pane = new BorderPane();
 		pane.setCenter(btn);
 		// add the layout pane to a scene
-		Scene scene = new Scene (pane, 300, 250);
+		Scene scene = new Scene (pane, 300, 300);
 		
 		// finalize and show the stage
 		primaryStage.setScene(scene);
