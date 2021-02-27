@@ -10,21 +10,17 @@ public class ClickMe extends Application {
 		launch(args);
 	}
 	
-	Button btn, btn2;
+	Button btn;
 	
 	@Override public void start(Stage primaryStage) {
 		// create the button
 		btn = new Button();
 		btn.setText("click me please!");
-		btn2 = new Button();
-		btn2.setText("0");
 		btn.setOnAction(e -> buttonClick(btn));
-		btn2.setOnAction(e -> buttonIncreaseNum(btn2));
 		
 		// add the button to a layout pane
 		BorderPane pane = new BorderPane();
 		pane.setCenter(btn);
-		pane.setLeft(btn2);
 		// add the layout pane to a scene
 		Scene scene = new Scene (pane, 300, 250);
 		
@@ -36,7 +32,7 @@ public class ClickMe extends Application {
 	
 	public void buttonClick(Button b) {
 		if (b.getText() == "click me please!") btn.setText("you clicked me!");
-		else b.setText("the fuck? why didn't you click me?");
+		else b.setText("click me please!");
 	}
 	
 	public void buttonIncreaseNum(Button b) {
